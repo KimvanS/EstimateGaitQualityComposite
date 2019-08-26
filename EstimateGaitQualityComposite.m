@@ -49,11 +49,11 @@ N_Harm = 20;                 % number of harmonics used for harmonic ratio and i
 
 %% Init output variable
 GaitGualityMeas = struct();
-GaitQualityforComposite=nan(1,4);
+GaitQualityComposite = nan;
 
 %% Only do further processing if time series is long enough
 if size(AccLoco,1) < WindowLen
-    return;
+    return
 end
 
 %% Calculate stride regularity from autocorrelations inspired by Moe-Nilssen & Helbostad (2005). Interstride trunk acceleration variability but not step width variability can differentiate between fit and frail older adults. Gait Posture. 21(2), 164-170.

@@ -103,7 +103,7 @@ HarmNr = [2 1 2];
 CommonRange = [0.6 1.2];
 % Get modal frequencies and the 'mean freq. of the peak'
 for i=1:3
-    MF1I = find([zeros(5,1);P(6:end,i)]==max([zeros(5,1);P(6:end,i)]),1);
+    [~,MF1I]=max([zeros(5,1);P(6:end,i)]);
     MF1 = F(MF1I,1);
     IndAround = F>=MF1*0.5 & F<=MF1*1.5;
     MeanAround = mean(P(IndAround,i));
